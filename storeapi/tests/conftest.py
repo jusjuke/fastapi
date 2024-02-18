@@ -1,11 +1,16 @@
+import os
 from typing import AsyncGenerator, Generator
 
 import pytest
 from httpx import AsyncClient
 
 from fastapi.testclient import TestClient
-from storeapi.main import app
-from storeapi.routers.post_router import comment_table, user_table
+
+# from storeapi.routers.post_router import comment_table, user_table
+
+os.environ["ENV_STATE"] = "test"
+from storeapi.database import database  # noqa: E402
+from storeapi.main import app  # noqa: E402
 
 
 # run once per session
@@ -22,9 +27,11 @@ def client() -> Generator:
 # run every time a test is run
 @pytest.fixture(autouse=True)
 async def db() -> AsyncGenerator:
-    user_table.clear()
-    comment_table.clear()
+    database.connect()
+    #    user_table.clear()
+    #    comment_table.clear()
     yield
+    await database.disconnect()
 
 
 @pytest.fixture()
