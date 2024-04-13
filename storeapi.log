@@ -1,0 +1,481 @@
+INFO.350Z:2024-02-25T11:38:59:storeapi.main-8s:15:Starting the application
+INFO.356Z:2024-02-25T11:38:59:uvicorn.error-8s:60:Application startup complete.
+INFO.294Z:2024-02-25T11:39:09:uvicorn.error-8s:265:Shutting down
+INFO.399Z:2024-02-25T11:39:09:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.402Z:2024-02-25T11:39:09:uvicorn.error-8s:76:Application shutdown complete.
+INFO.403Z:2024-02-25T11:39:09:uvicorn.error-8s:87:Finished server process [467268]
+INFO.630Z:2024-02-25T11:46:18:storeapi.main-8s:15:Starting the application
+INFO.635Z:2024-02-25T11:46:18:uvicorn.error-8s:60:Application startup complete.
+INFO.844Z:2024-02-25T11:46:30:uvicorn.access-8s:489:127.0.0.1:59154 - "POST /post HTTP/1.1" 201
+DEBUG.848Z:2024-02-25T11:46:35:storeapi.routers.post_router-8s:50:SELECT post.id, post.body 
+FROM post
+INFO.855Z:2024-02-25T11:46:35:uvicorn.access-8s:489:127.0.0.1:59154 - "GET /post HTTP/1.1" 200
+INFO.784Z:2024-02-25T11:52:42:uvicorn.error-8s:265:Shutting down
+INFO.889Z:2024-02-25T11:52:42:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.893Z:2024-02-25T11:52:42:uvicorn.error-8s:76:Application shutdown complete.
+INFO.895Z:2024-02-25T11:52:42:uvicorn.error-8s:87:Finished server process [468996]
+INFO.347Z:2024-02-25T11:52:44:storeapi.main-8s:15:Starting the application
+INFO.353Z:2024-02-25T11:52:44:uvicorn.error-8s:60:Application startup complete.
+INFO.130Z:2024-02-25T11:52:59:storeapi.routers.post_router-8s:86:Finding post with post_id: 1
+INFO.134Z:2024-02-25T11:52:59:uvicorn.access-8s:489:127.0.0.1:59188 - "GET /post/1 HTTP/1.1" 200
+INFO.013Z:2024-02-25T11:53:15:uvicorn.error-8s:265:Shutting down
+INFO.120Z:2024-02-25T11:53:15:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.123Z:2024-02-25T11:53:15:uvicorn.error-8s:76:Application shutdown complete.
+INFO.124Z:2024-02-25T11:53:15:uvicorn.error-8s:87:Finished server process [474912]
+INFO.498Z:2024-02-25T11:53:18:storeapi.main-8s:15:Starting the application
+INFO.504Z:2024-02-25T11:53:18:uvicorn.error-8s:60:Application startup complete.
+INFO.120Z:2024-02-25T11:53:32:storeapi.routers.post_router-8s:86:Finding post with post_id: 1
+INFO.124Z:2024-02-25T11:53:32:uvicorn.access-8s:489:127.0.0.1:59196 - "GET /post/1 HTTP/1.1" 200
+INFO.876Z:2024-02-25T11:55:55:uvicorn.error-8s:265:Shutting down
+INFO.982Z:2024-02-25T11:55:55:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.984Z:2024-02-25T11:55:55:uvicorn.error-8s:76:Application shutdown complete.
+INFO.986Z:2024-02-25T11:55:55:uvicorn.error-8s:87:Finished server process [474432]
+INFO.027Z:2024-02-25T11:55:57:storeapi.main-8s:15:Starting the application
+ERROR.103Z:2024-02-25T11:55:57:uvicorn.error-8s:121:Traceback (most recent call last):
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\base_events.py", line 650, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\server.py", line 79, in serve
+    await self.startup(sockets=sockets)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\server.py", line 90, in startup
+    await self.lifespan.startup()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\lifespan\on.py", line 54, in startup
+    await self.startup_event.wait()
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\locks.py", line 213, in wait
+    await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 734, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\contextlib.py", line 204, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\storeapi\main.py", line 16, in lifespan
+    await database.connect()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 127, in connect
+    await self._global_transaction.__aenter__()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 413, in __aenter__
+    await self.start()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 453, in start
+    await self._connection.__aenter__()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 267, in __aenter__
+    raise e
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 264, in __aenter__
+    await self._connection.acquire()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\backends\sqlite.py", line 99, in acquire
+    self._connection = await self._pool.acquire()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\backends\sqlite.py", line 79, in acquire
+    await connection.__aenter__()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\aiosqlite\core.py", line 154, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\aiosqlite\core.py", line 141, in _connect
+    self._connection = await future
+                       ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+INFO.746Z:2024-02-25T11:56:38:storeapi.main-8s:15:Starting the application
+INFO.751Z:2024-02-25T11:56:38:uvicorn.error-8s:60:Application startup complete.
+ERROR.919Z:2024-02-25T11:57:16:storeapi.routers.post_router-8s:58:Post not found with post_id: 30
+INFO.921Z:2024-02-25T11:57:16:uvicorn.access-8s:489:127.0.0.1:59227 - "POST /comment HTTP/1.1" 404
+INFO.886Z:2024-02-25T12:07:36:uvicorn.error-8s:265:Shutting down
+INFO.991Z:2024-02-25T12:07:36:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.994Z:2024-02-25T12:07:36:uvicorn.error-8s:76:Application shutdown complete.
+INFO.995Z:2024-02-25T12:07:36:uvicorn.error-8s:87:Finished server process [477036]
+INFO.663Z:2024-02-25T12:10:42:storeapi.main-8s:15:Starting the application
+INFO.668Z:2024-02-25T12:10:42:uvicorn.error-8s:60:Application startup complete.
+INFO.828Z:2024-02-25T12:11:19:uvicorn.error-8s:265:Shutting down
+INFO.933Z:2024-02-25T12:11:19:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.938Z:2024-02-25T12:11:19:uvicorn.error-8s:76:Application shutdown complete.
+INFO.939Z:2024-02-25T12:11:19:uvicorn.error-8s:87:Finished server process [481188]
+INFO.971Z:2024-02-25T12:11:20:storeapi.main-8s:15:Starting the application
+ERROR.979Z:2024-02-25T12:11:20:uvicorn.error-8s:121:Traceback (most recent call last):
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\base_events.py", line 650, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\server.py", line 79, in serve
+    await self.startup(sockets=sockets)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\server.py", line 90, in startup
+    await self.lifespan.startup()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\lifespan\on.py", line 54, in startup
+    await self.startup_event.wait()
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\locks.py", line 213, in wait
+    await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 734, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\contextlib.py", line 204, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\storeapi\main.py", line 16, in lifespan
+    await database.connect()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 127, in connect
+    await self._global_transaction.__aenter__()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 413, in __aenter__
+    await self.start()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 453, in start
+    await self._connection.__aenter__()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 267, in __aenter__
+    raise e
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 264, in __aenter__
+    await self._connection.acquire()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\backends\sqlite.py", line 99, in acquire
+    self._connection = await self._pool.acquire()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\backends\sqlite.py", line 79, in acquire
+    await connection.__aenter__()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\aiosqlite\core.py", line 154, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\aiosqlite\core.py", line 141, in _connect
+    self._connection = await future
+                       ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+INFO.489Z:2024-02-25T12:11:45:storeapi.main-8s:15:Starting the application
+INFO.494Z:2024-02-25T12:11:45:uvicorn.error-8s:60:Application startup complete.
+ERROR.284Z:2024-02-25T12:11:55:storeapi.main-8s:27:HTTPException: 404, Post not found
+INFO.286Z:2024-02-25T12:11:55:uvicorn.access-8s:489:127.0.0.1:59318 - "POST /comment HTTP/1.1" 500
+ERROR.288Z:2024-02-25T12:11:55:uvicorn.error-8s:424:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 74, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\storeapi\routers\post_router.py", line 59, in create_comment
+    raise HTTPException(status_code=404, detail="Post not found")
+fastapi.exceptions.HTTPException: 404: Post not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 419, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 758, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 778, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 299, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 79, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\_exception_handler.py", line 78, in wrapped_app
+    await response(scope, receive, sender)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not callable
+INFO.140Z:2024-02-25T12:12:24:uvicorn.error-8s:265:Shutting down
+INFO.246Z:2024-02-25T12:12:24:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.248Z:2024-02-25T12:12:24:uvicorn.error-8s:76:Application shutdown complete.
+INFO.250Z:2024-02-25T12:12:24:uvicorn.error-8s:87:Finished server process [481936]
+INFO.358Z:2024-02-25T12:12:25:storeapi.main-8s:15:Starting the application
+INFO.364Z:2024-02-25T12:12:25:uvicorn.error-8s:60:Application startup complete.
+INFO.615Z:2024-02-25T12:14:04:uvicorn.error-8s:265:Shutting down
+INFO.720Z:2024-02-25T12:14:04:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.723Z:2024-02-25T12:14:04:uvicorn.error-8s:76:Application shutdown complete.
+INFO.725Z:2024-02-25T12:14:04:uvicorn.error-8s:87:Finished server process [482864]
+INFO.766Z:2024-02-25T12:14:05:storeapi.main-8s:15:Starting the application
+INFO.771Z:2024-02-25T12:14:05:uvicorn.error-8s:60:Application startup complete.
+INFO.462Z:2024-02-25T12:14:07:uvicorn.error-8s:265:Shutting down
+INFO.569Z:2024-02-25T12:14:07:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.572Z:2024-02-25T12:14:07:uvicorn.error-8s:76:Application shutdown complete.
+INFO.574Z:2024-02-25T12:14:07:uvicorn.error-8s:87:Finished server process [484908]
+INFO.628Z:2024-02-25T12:14:08:storeapi.main-8s:15:Starting the application
+INFO.633Z:2024-02-25T12:14:08:uvicorn.error-8s:60:Application startup complete.
+INFO.801Z:2024-02-25T12:14:09:uvicorn.error-8s:265:Shutting down
+INFO.908Z:2024-02-25T12:14:09:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.910Z:2024-02-25T12:14:09:uvicorn.error-8s:76:Application shutdown complete.
+INFO.912Z:2024-02-25T12:14:09:uvicorn.error-8s:87:Finished server process [484884]
+INFO.926Z:2024-02-25T12:14:10:storeapi.main-8s:15:Starting the application
+INFO.931Z:2024-02-25T12:14:10:uvicorn.error-8s:60:Application startup complete.
+INFO.246Z:2024-02-25T12:14:45:uvicorn.error-8s:265:Shutting down
+INFO.351Z:2024-02-25T12:14:45:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.354Z:2024-02-25T12:14:45:uvicorn.error-8s:76:Application shutdown complete.
+INFO.355Z:2024-02-25T12:14:45:uvicorn.error-8s:87:Finished server process [484304]
+INFO.424Z:2024-02-25T12:14:46:storeapi.main-8s:15:Starting the application
+INFO.430Z:2024-02-25T12:14:46:uvicorn.error-8s:60:Application startup complete.
+INFO.928Z:2024-02-25T12:15:02:uvicorn.error-8s:265:Shutting down
+INFO.033Z:2024-02-25T12:15:03:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.036Z:2024-02-25T12:15:03:uvicorn.error-8s:76:Application shutdown complete.
+INFO.038Z:2024-02-25T12:15:03:uvicorn.error-8s:87:Finished server process [485984]
+INFO.050Z:2024-02-25T12:15:04:storeapi.main-8s:15:Starting the application
+ERROR.058Z:2024-02-25T12:15:04:uvicorn.error-8s:121:Traceback (most recent call last):
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\base_events.py", line 650, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\server.py", line 79, in serve
+    await self.startup(sockets=sockets)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\server.py", line 90, in startup
+    await self.lifespan.startup()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\lifespan\on.py", line 54, in startup
+    await self.startup_event.wait()
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\locks.py", line 213, in wait
+    await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 734, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "C:\Users\jusju\.pyenv\pyenv-win\versions\3.11.0\Lib\contextlib.py", line 204, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\storeapi\main.py", line 16, in lifespan
+    await database.connect()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 127, in connect
+    await self._global_transaction.__aenter__()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 413, in __aenter__
+    await self.start()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 453, in start
+    await self._connection.__aenter__()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 267, in __aenter__
+    raise e
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\core.py", line 264, in __aenter__
+    await self._connection.acquire()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\backends\sqlite.py", line 99, in acquire
+    self._connection = await self._pool.acquire()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\databases\backends\sqlite.py", line 79, in acquire
+    await connection.__aenter__()
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\aiosqlite\core.py", line 154, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\aiosqlite\core.py", line 141, in _connect
+    self._connection = await future
+                       ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+INFO.632Z:2024-02-25T12:15:19:storeapi.main-8s:15:Starting the application
+INFO.638Z:2024-02-25T12:15:19:uvicorn.error-8s:60:Application startup complete.
+ERROR.181Z:2024-02-25T12:15:30:storeapi.main-8s:27:HTTPException: 404, Post not found
+INFO.183Z:2024-02-25T12:15:30:uvicorn.access-8s:489:127.0.0.1:59348 - "POST /comment HTTP/1.1" 500
+ERROR.185Z:2024-02-25T12:15:30:uvicorn.error-8s:424:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 74, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\storeapi\routers\post_router.py", line 59, in create_comment
+    raise HTTPException(status_code=404, detail="Post not found")
+fastapi.exceptions.HTTPException: 404: Post not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 419, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 758, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 778, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 299, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 79, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\_exception_handler.py", line 75, in wrapped_app
+    response = await handler(conn, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\storeapi\main.py", line 28, in http_exception_handler_logging
+    return await request.app.handle_exception(request, exc)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'FastAPI' object has no attribute 'handle_exception'
+INFO.550Z:2024-02-25T12:16:25:uvicorn.error-8s:265:Shutting down
+INFO.655Z:2024-02-25T12:16:25:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.658Z:2024-02-25T12:16:25:uvicorn.error-8s:76:Application shutdown complete.
+INFO.659Z:2024-02-25T12:16:25:uvicorn.error-8s:87:Finished server process [485992]
+INFO.749Z:2024-02-25T12:16:26:storeapi.main-8s:15:Starting the application
+INFO.754Z:2024-02-25T12:16:26:uvicorn.error-8s:60:Application startup complete.
+INFO.512Z:2024-02-25T12:16:29:uvicorn.error-8s:265:Shutting down
+INFO.617Z:2024-02-25T12:16:29:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.620Z:2024-02-25T12:16:29:uvicorn.error-8s:76:Application shutdown complete.
+INFO.622Z:2024-02-25T12:16:29:uvicorn.error-8s:87:Finished server process [488180]
+INFO.664Z:2024-02-25T12:16:30:storeapi.main-8s:15:Starting the application
+INFO.669Z:2024-02-25T12:16:30:uvicorn.error-8s:60:Application startup complete.
+ERROR.780Z:2024-02-25T12:16:34:storeapi.main-8s:27:HTTPException: 404, Post not found
+INFO.782Z:2024-02-25T12:16:34:uvicorn.access-8s:489:127.0.0.1:59372 - "POST /comment HTTP/1.1" 500
+ERROR.783Z:2024-02-25T12:16:34:uvicorn.error-8s:424:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 74, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\storeapi\routers\post_router.py", line 59, in create_comment
+    raise HTTPException(status_code=404, detail="Post not found")
+fastapi.exceptions.HTTPException: 404: Post not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 419, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 758, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 778, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 299, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\routing.py", line 79, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\jusju\python_repo\fastapi\.venv\Lib\site-packages\starlette\_exception_handler.py", line 75, in wrapped_app
+    response = await handler(conn, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jusju\python_repo\fastapi\storeapi\main.py", line 28, in http_exception_handler_logging
+    return await http_exception_handler(request, exc)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'http_exception_handler' is not defined
+INFO.039Z:2024-02-25T12:17:56:uvicorn.error-8s:265:Shutting down
+INFO.145Z:2024-02-25T12:17:56:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.148Z:2024-02-25T12:17:56:uvicorn.error-8s:76:Application shutdown complete.
+INFO.150Z:2024-02-25T12:17:56:uvicorn.error-8s:87:Finished server process [488336]
+INFO.043Z:2024-02-25T12:18:33:storeapi.main-8s:16:Starting the application
+INFO.048Z:2024-02-25T12:18:33:uvicorn.error-8s:60:Application startup complete.
+ERROR.323Z:2024-02-25T12:18:39:storeapi.main-8s:28:HTTPException: 404, Post not found
+INFO.326Z:2024-02-25T12:18:39:uvicorn.access-8s:489:127.0.0.1:59386 - "POST /comment HTTP/1.1" 404
+INFO.824Z:2024-02-25T12:44:42:uvicorn.error-8s:265:Shutting down
+INFO.931Z:2024-02-25T12:44:42:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.935Z:2024-02-25T12:44:42:uvicorn.error-8s:76:Application shutdown complete.
+INFO.936Z:2024-02-25T12:44:42:uvicorn.error-8s:87:Finished server process [483940]
+INFO.294Z:2024-02-25T13:02:35:storeapi.main-8s:18:Starting the application
+INFO.300Z:2024-02-25T13:02:35:uvicorn.error-8s:60:Application startup complete.
+INFO.695Z:2024-02-25T13:02:40:uvicorn.access-8s:489:127.0.0.1:59638 - "POST /comment HTTP/1.1" 201
+INFO.183Z:2024-02-25T13:02:59:uvicorn.access-8s:489:127.0.0.1:59641 - "POST /comment HTTP/1.1" 201
+INFO.946Z:2024-02-25T13:10:05:uvicorn.error-8s:265:Shutting down
+INFO.052Z:2024-02-25T13:10:06:uvicorn.error-8s:65:Waiting for application shutdown.
+INFO.056Z:2024-02-25T13:10:06:uvicorn.error-8s:76:Application shutdown complete.
+INFO.058Z:2024-02-25T13:10:06:uvicorn.error-8s:87:Finished server process [504304]
+{"levelname": "INFO", "msecs": 655.0, "asctime": "2024-02-25T13:14:39", "name": "storeapi.main", "lineno": 18, "message": "Starting the application", "correlation_id": "-"}
+{"levelname": "INFO", "msecs": 660.0, "asctime": "2024-02-25T13:14:39", "name": "uvicorn.error", "lineno": 60, "message": "Application startup complete.", "correlation_id": "-"}
+{"levelname": "DEBUG", "msecs": 1.0, "asctime": "2024-02-25T13:14:50", "name": "storeapi.routers.post_router", "lineno": 50, "message": "SELECT post.id, post.body \nFROM post", "correlation_id": "72838d8f"}
+{"levelname": "INFO", "msecs": 5.0, "asctime": "2024-02-25T13:14:50", "name": "uvicorn.access", "lineno": 489, "message": "127.0.0.1:59715 - \"GET /post HTTP/1.1\" 200", "correlation_id": "72838d8f"}
+{"levelname": "INFO", "msecs": 392.0, "asctime": "2024-02-25T13:16:32", "name": "uvicorn.error", "lineno": 265, "message": "Shutting down", "correlation_id": "-"}
+{"levelname": "INFO", "msecs": 497.0, "asctime": "2024-02-25T13:16:32", "name": "uvicorn.error", "lineno": 65, "message": "Waiting for application shutdown.", "correlation_id": "-"}
+{"levelname": "INFO", "msecs": 500.0, "asctime": "2024-02-25T13:16:32", "name": "uvicorn.error", "lineno": 76, "message": "Application shutdown complete.", "correlation_id": "-"}
+{"levelname": "INFO", "msecs": 502.0, "asctime": "2024-02-25T13:16:32", "name": "uvicorn.error", "lineno": 87, "message": "Finished server process [509428]", "color_message": "Finished server process [\u001b[36m%d\u001b[0m]", "correlation_id": "-"}
